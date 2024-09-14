@@ -4,39 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="./assets//css/Registration.css">
+    <title>G-Academy Registration Form</title>
+    <link rel="stylesheet" href="/assets/css/Registration.css">
 </head>
 
 <body>
-    <div class="container">
-        <button id="registerBtn" class="register-btn">Register for Free</button>
 
-        <div id="registrationForm" class="form-container hidden">
-            <h2>Register</h2>
-            <form action="#">
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="input-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
-            </form>
+    <div class="registration-form">
+        <h2>Student Registration</h2>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
         </div>
+        <div class="form-group">
+            <label for="fname">Father Name</label>
+            <input type="text" id="fname" placeholder="Enter Your Father Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="class">Select Class</label>
+            <select id="class" required>
+                <option value="" disabled selected>Select your class</option>
+                <option value="5">Class 5</option>
+                <option value="6">Class 6</option>
+                <option value="7">Class 7</option>
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+        </div>
+        <button id="registerBtn">Submit</button>
+        <p class="already-registered" id="error-msg" style="display: none;">You are already registered!</p>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/assets//js/register.js"></script>
 </body>
 
 </html>

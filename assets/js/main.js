@@ -197,20 +197,38 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
+  // window.addEventListener('load', function (e) {
+  //   if (window.location.hash) {
+  //     if (document.querySelector(window.location.hash)) {
+  //       setTimeout(() => {
+  //         let section = document.querySelector(window.location.hash);
+  //         let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+  //         window.scrollTo({
+  //           top: section.offsetTop - parseInt(scrollMarginTop),
+  //           behavior: 'smooth'
+  //         });
+  //       }, 100);
+  //     }
+  //   }
+  // });
   window.addEventListener('load', function (e) {
-    if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
+    const hash = window.location.hash;
+    console.log(hash);
+    // Check if the hash is valid (not just # or #!)
+    if (hash && hash.length > 2 && document.querySelector(hash)) {
+      setTimeout(() => {
+        let section = document.querySelector(hash);
+        if (section) {
           let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
           window.scrollTo({
             top: section.offsetTop - parseInt(scrollMarginTop),
             behavior: 'smooth'
           });
-        }, 100);
-      }
+        }
+      }, 100);
     }
   });
+
 
   /**
    * Navmenu Scrollspy
@@ -254,7 +272,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch(`content-${lang}.json`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         // Iterate through each section and update the content
         Object.keys(contentElements).forEach(section => {
           Object.keys(contentElements[section]).forEach(key => {
@@ -271,12 +288,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function toggleLanguage() {
     currentLang = currentLang === 'hi' ? 'en' : 'hi';
     localStorage.setItem('language', currentLang);
-    langButton.textContent = currentLang === 'hi' ? 'EN' : 'HI';
+    langButton.textContent = currentLang === 'hi' ? 'EN' : 'HINDI';
     loadContent(currentLang);
   }
 
   // Set button to current language and load the corresponding content
-  langButton.textContent = currentLang === 'hi' ? 'EN' : 'HI';
+  langButton.textContent = currentLang === 'hi' ? 'EN' : 'HINDI';
   loadContent(currentLang);
 
   // Add event listener to switch languages when button is clicked
@@ -284,24 +301,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Registration
+document.addEventListener('DOMContentLoaded', function () {
+  const registerButton = document.querySelector('.register-button');
+  registerButton.addEventListener('click', function (e) {
+    if (localStorage.getItem('isRegistered') === 'yes') {
+      e.preventDefault();
+      console.log(localStorage.getItem('language'));
+      registerButton.textContent = localStorage.getItem('language') === 'en' ? "Already Registered" : "पहले से ही पंजीकृत"
+      registerButton.href = '#'; // Disable link redirection
+      registerButton.classList.add('disabled'); // Optionally add a disabled style
+    }
+  });
+});
 
-// Registration model
-// const registerBtn = document.getElementById('register-button');
-// console.log(registerBtn);
-// const formModal = document.getElementById('formModal');
-// const closeBtn = document.getElementById('closeBtn');
-
-// registerBtn.addEventListener('click', function () {
-//   formModal.classList.add('show');
-// });
-
-// closeBtn.addEventListener('click', function () {
-//   formModal.classList.remove('show');
-// });
-
-// // Close the modal when clicking outside of the form
-// window.addEventListener('click', function (e) {
-//   if (e.target === formModal) {
-//     formModal.classList.remove('show');
-//   }
-// });

@@ -476,14 +476,14 @@ h6 {
 .language-switcher #current-lang {
   font-size: 18px;
   color: var(--contrast-color);
-  animation: flashText 2s infinite ease-in-out; /* Flashing animation */
+  animation: flashText 2s infinite ease-in;
 }
 
 /* Hover effect for the button */
 .language-switcher:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  box-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color),
-    0 0 45px var(--accent-color);
+  /* box-shadow: 0 0 8px var(--accent-color), 0 0 10px var(--accent-color),
+    0 0 10px var(--accent-color); */
 }
 
 /* Flashing animation keyframes */
@@ -492,7 +492,7 @@ h6 {
     color: var(--contrast-color);
   }
   50% {
-    color: var(--accent-color); /* Flashing to background color */
+    color: var(--accent-color);
   }
   100% {
     color: var(--contrast-color);
@@ -706,6 +706,7 @@ section,
   height: 100%;
   margin-top: 20px;
   position: relative;
+  z-index: 10;
 }
 .register-button {
   padding: 15px 40px;
@@ -1043,70 +1044,6 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1177,116 +1114,5 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-@-webkit-keyframes pulse {
-  from {
-    opacity: 0.4;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 0.4;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  from {
-    opacity: 0.4;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 0.4;
-    transform: translateY(0);
-  }
-}
-#particle-js {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  animation: pulse 2s infinite;
-}
-.contents {
-  position: relative;
-  z-index: 1; /* Keep content above particles */
-  color: white;
-  text-align: center;
-  padding-top: 20%;
-  font-size: 2rem;
-}
 
 /* language button */
-/* Basic styles for the button */
-/* Basic styles for the button */
-.btn-lang {
-  padding: 12px 25px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #001f3f; /* Dark blue for contrast */
-  border: 2px solid #00ffff; /* Cyan border */
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  outline: none;
-  transition: color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Hover effect with glowing cyan light */
-.btn-lang:hover {
-  background-color: transparent;
-  color: #00ffff; /* Cyan text on hover */
-  border-color: #00ffff;
-  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
-}
-
-/* Nano light effect: subtle glowing light around the button */
-.btn-lang::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 255, 255, 0.1); /* Light cyan overlay */
-  border-radius: 50px;
-  transform: scale(1);
-  transition: all 0.4s ease-in-out;
-  z-index: -1;
-}
-
-/* On hover, the nano light grows outward */
-.btn-lang:hover::before {
-  width: 130%;
-  height: 130%;
-  transform: scale(1.2);
-  opacity: 0.3; /* Slight glow */
-}
-
-/* Optional: Nano light shimmer animation */
-@keyframes nanoShimmer {
-  0% {
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  }
-  50% {
-    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
-  }
-  100% {
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  }
-}
-
-.btn-lang:hover {
-  animation: nanoShimmer 1.5s infinite ease-in-out;
-}
