@@ -619,6 +619,20 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 /* Hero section styles */
+#particle-js {
+  position: fixed; /* Fixes the position so it stays in the background */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: -1; /* Make sure it stays behind other elements */
+  pointer-events: none; /* Prevent any interaction with the particles */
+}
+#hero-1 .container-1 {
+  position: relative;
+  z-index: 1; /* Content on top of particles */
+  padding: 20px;
+}
 .hero {
   /* position: relative; */
   width: 100%;
@@ -654,6 +668,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  align-content: center;
 }
 
 .hero h2 {
@@ -756,6 +771,39 @@ section,
     padding: 10px 20px;
   }
 }
+
+/* particle-js css*/
+
+/* Pulse animation for smooth visual effect */
+@-webkit-keyframes pulse {
+  from {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # About Section

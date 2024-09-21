@@ -317,3 +317,117 @@ document.addEventListener('DOMContentLoaded', function () {
   // });
 });
 
+
+
+/// particles-js
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize particles.js with polygon animation
+  particlesJS('particle-js', {
+    "particles": {
+      "number": {
+        "value": 80, // Number of particles
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff" // White color for polygons
+      },
+      "shape": {
+        "type": "polygon", // Polygon shape
+        "stroke": {
+          "width": 1,
+          "color": "#ffffff"
+        },
+        "polygon": {
+          "nb_sides": 5 // 5-sided polygons (pentagons)
+        }
+      },
+      "opacity": {
+        "value": 0.9,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0.3,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 4, // Polygon size
+        "random": true, // Random size for variety
+        "anim": {
+          "enable": true,
+          "speed": 10,
+          "size_min": 1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true, // Enable lines between polygons
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true, // Enable movement
+        "speed": 2, // Slow speed for smooth animation
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas", // Interactive events detected on canvas
+      "events": {
+        "onhover": {
+          "enable": true, // Enable hover effects
+          "mode": "grab" // Grab nearby polygons on hover
+        },
+        "onclick": {
+          "enable": true, // Enable click effects
+          "mode": "push" // Push new particles on click
+        },
+        "resize": true // Adjust on window resize
+      },
+      "modes": {
+        "grab": {
+          "distance": 200, // Distance to grab particles
+          "line_linked": {
+            "opacity": 1 // Make lines more visible on hover
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true // Detect retina display for sharper particles
+  });
+
+});
+
