@@ -2,5 +2,8 @@
   "home": {
     "siteName": "Garud Academy",
     "register-button": "Register For Free"
+  },
+  "resume" : {
+    "about_me_desc": "I’m Sachin, a tech enthusiast with a deep passion for problem-solving and creating impactful solutions. From the rigorous days of Magadh Super 30 to my journey at IIT Bombay, I’ve embraced challenges that shaped both my technical skills and my mindset. Currently, I’m a Software Engineer, and through my project, Garud Academy, I’m committed to mentoring young minds in Bihar, helping them think independently and unlock their true potential"
   }
 }

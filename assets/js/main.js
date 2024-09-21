@@ -265,6 +265,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "siteName": document.querySelector('.siteName'),
       "register-button": document.querySelector('.register-button')
     },
+    "resume": {
+      "about_me_desc": document.querySelector('.about_me_desc')
+    }
   };
 
   // Function to load and apply content based on the current language
@@ -304,14 +307,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // Registration
 document.addEventListener('DOMContentLoaded', function () {
   const registerButton = document.querySelector('.register-button');
-  registerButton.addEventListener('click', function (e) {
-    if (localStorage.getItem('isRegistered') === 'yes') {
-      e.preventDefault();
-      console.log(localStorage.getItem('language'));
-      registerButton.textContent = localStorage.getItem('language') === 'en' ? "Already Registered" : "पहले से ही पंजीकृत"
-      registerButton.href = '#'; // Disable link redirection
-      registerButton.classList.add('disabled'); // Optionally add a disabled style
-    }
-  });
+  registerButton.textContent = localStorage.getItem('language') === 'en' ? "Submit Another Response" : "पहले से ही पंजीकृत"
+  // registerButton.addEventListener('click', function (e) {
+  //   if (localStorage.getItem('isRegistered') === 'yes') {
+  //     e.preventDefault();
+  //     console.log(localStorage.getItem('language'));
+  //     registerButton.textContent = localStorage.getItem('language') === 'en' ? "Already Registered" : "पहले से ही पंजीकृत"
+  //   }
+  // });
 });
 
