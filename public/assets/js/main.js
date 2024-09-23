@@ -326,20 +326,20 @@ document.addEventListener("DOMContentLoaded", function () {
   particlesJS('particle-js', {
     "particles": {
       "number": {
-        "value": 80, // Number of particles
+        "value": 40, // Number of particles
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#ffffff" // White color for polygons
+        "value": "#8a8d8f" // White color for polygons
       },
       "shape": {
         "type": "polygon", // Polygon shape
         "stroke": {
           "width": 1,
-          "color": "#ffffff"
+          "color": "#8a8d8f"
         },
         "polygon": {
           "nb_sides": 5 // 5-sided polygons (pentagons)
@@ -356,12 +356,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       },
       "size": {
-        "value": 4, // Polygon size
+        "value": 2.5, // Polygon size
         "random": true, // Random size for variety
         "anim": {
           "enable": true,
           "speed": 10,
-          "size_min": 1,
+          "size_min": 0.5,
           "sync": false
         }
       },
