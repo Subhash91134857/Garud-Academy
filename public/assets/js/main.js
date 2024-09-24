@@ -266,7 +266,38 @@ document.addEventListener('DOMContentLoaded', function () {
       "register-button": document.querySelector('.register-button')
     },
     "resume": {
-      "about_me_desc": document.querySelector('.about_me_desc')
+      "about_me_desc": document.querySelector('.about_me_desc'),
+      "about-me-text": document.querySelector('.about-me-text'),
+      "my-journey-text": document.querySelector('.my-journey-text'),
+      "resume-title-1": document.querySelector('.resume-title-1'),
+      "resume-item-1-location": document.querySelector('.resume-item-1-location'),
+      "resume-item-1-desc-1": document.querySelector('.resume-item-1-desc-1'),
+      "resume-item-1-desc-2": document.querySelector('.resume-item-1-desc-2'),
+      "resume-item-1-desc-3": document.querySelector('.resume-item-1-desc-3'),
+
+      "resume-title-2": document.querySelector('.resume-title-2'),
+      "resume-item-2-location": document.querySelector('.resume-item-2-location'),
+      "resume-item-2-desc-1": document.querySelector('.resume-item-2-desc-1'),
+      "resume-item-2-desc-2": document.querySelector('.resume-item-2-desc-2'),
+      "resume-item-2-desc-3": document.querySelector('.resume-item-2-desc-3'),
+
+      "resume-title-3": document.querySelector('.resume-title-3'),
+      "resume-item-3-location": document.querySelector('.resume-item-3-location'),
+      "resume-item-3-desc-1": document.querySelector('.resume-item-3-desc-1'),
+      "resume-item-3-desc-2": document.querySelector('.resume-item-3-desc-2'),
+      "resume-item-3-desc-3": document.querySelector('.resume-item-3-desc-3'),
+
+      "resume-title-4": document.querySelector('.resume-title-4'),
+      "resume-item-4-location": document.querySelector('.resume-item-4-location'),
+      "resume-item-4-desc-1": document.querySelector('.resume-item-4-desc-1'),
+      "resume-item-4-desc-2": document.querySelector('.resume-item-4-desc-2'),
+      "resume-item-4-desc-3": document.querySelector('.resume-item-4-desc-3'),
+
+      "resume-title-5": document.querySelector('.resume-title-5'),
+      "resume-item-5-location": document.querySelector('.resume-item-5-location'),
+      "resume-item-5-desc-1": document.querySelector('.resume-item-5-desc-1'),
+      "resume-item-5-desc-2": document.querySelector('.resume-item-5-desc-2'),
+      "resume-item-5-desc-3": document.querySelector('.resume-item-5-desc-3')
     }
   };
 
@@ -429,5 +460,31 @@ document.addEventListener("DOMContentLoaded", function () {
     "retina_detect": true // Detect retina display for sharper particles
   });
 
+});
+
+
+
+// contact us form submission
+
+const form = document.getElementById("contactForm");
+const scriptURL = 'https://script.google.com/macros/s/AKfycby3ArXEI0fbqe4bA7PaoRihOpl-7NXmTA_yyLWQQHyivyWRJ1m41UZv3gwAixw9RSFivg/exec';  // Replace with your Google Apps Script URL
+
+form.addEventListener('submit', e => {
+  e.preventDefault();  // Prevent form default behavior
+  document.querySelector('.loading').style.display = 'block';  // Show loading message
+  document.querySelector('.sent-message').style.display = 'none';  // Hide previous success message
+  document.querySelector('.error-message').style.display = 'none';  // Hide previous error message
+
+  // Handle form submission
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        document.querySelector('.loading').style.display = 'none';  // Hide loading message
+        document.querySelector('.sent-message').style.display = 'block';  // Show success message
+        form.reset();  // Clear the form after submission
+      })
+      .catch(error => {
+        document.querySelector('.loading').style.display = 'none';  // Hide loading message
+        document.querySelector('.error-message').style.display = 'block';  // Show error message
+      });
 });
 

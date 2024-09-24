@@ -3,7 +3,35 @@
     "siteName": "Garud Academy",
     "register-button": "Register For Free"
   },
-  "resume" : {
-    "about_me_desc": "I’m Sachin, a tech enthusiast with a deep passion for problem-solving and creating impactful solutions. From the rigorous days of Magadh Super 30 to my journey at IIT Bombay, I’ve embraced challenges that shaped both my technical skills and my mindset. Currently, I’m a Software Engineer, and through my project, Garud Academy, I’m committed to mentoring young minds in Bihar, helping them think independently and unlock their true potential"
+  "resume": {
+    "about_me_desc": "At G-Academy, we are here to help students like you build a strong foundation in learning, making tough subjects easy to understand. Our founder, Sachin, is an IIT Bombay graduate and a former student of Magadh Super 30. He cracked the JEE exam by mastering important concepts, and now he’s ready to share his knowledge with you!\n\nWith Our guidance, you’ll learn how to think independently and solve problems step by step. Our goal is to help you achieve your dreams by making learning fun, clear, and exciting. Join us, and let’s unlock your full potential together!",
+    "about-me-text": "About me",
+
+    "my-journey-text": "My Journey",
+    "resume-title-1": "Magadh Super 30",
+    "resume-item-1-location": "Gaya, Bihar",
+    "resume-item-1-desc-1": "Selected as one of the top 30 students to receive free lodging and education to prepare for the IIT-JEE exam",
+    "resume-item-1-desc-2": "Developed a strong understanding of Science and Math, which boosted my critical thinking and problem-solving abilities.",
+    "resume-item-1-desc-3": "Guided junior students, helping them understand tough concepts and solve problems independently.",
+
+    "resume-title-2": "IIT Bombay",
+    "resume-item-2-location": "Mumbai, Maharashtra",
+    "resume-item-2-desc-1": "Focused on personal growth while learning from some of the brightest minds in India.",
+    "resume-item-2-desc-2": "Developed a passion for programming and software development.",
+    "resume-item-2-desc-3": "Secured an exciting job in software development field",
+
+    "resume-title-3": "MapIT.ai (Android App Engineer)",
+    "resume-item-3-location": "Mumbai, Maharashtra",
+    "resume-item-3-desc-1": "Worked on creating Android applications for the company.",
+
+    "resume-title-4": "CODIIS (Software Engineer)",
+    "resume-item-4-location": "Chennai, Tamil Nadu",
+    "resume-item-4-desc-1": "Currently working as a Software Engineer",
+
+    "resume-title-5": "Garud Academy",
+    "resume-item-5-location": "Gaya, Bihar",
+    "resume-item-5-desc-1": "My goal is to guide students on how to achieve their goals, whether it's cracking IIT or NEET or any competitive exams",
+    "resume-item-5-desc-2": "I act as a mentor, guide, and friend throughout their journey"
   }
+
 }

@@ -476,7 +476,7 @@ h6 {
 .language-switcher #current-lang {
   font-size: 18px;
   color: var(--contrast-color);
-  animation: flashText 2s infinite ease-in;
+  /*animation: flashText 2s infinite ease-in;*/
 }
 
 /* Hover effect for the button */
@@ -734,11 +734,11 @@ section,
   cursor: pointer;
   transition: all 0.3s ease;
   border: 3px solid;
-  background: linear-gradient(to right, #00ffcc, #ff66cc);
+  background: linear-gradient(to right, #197c68, #953976);
   background-size: 200% auto;
   color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  animation: moveBorder 3s linear infinite;
+  /*animation: moveBorder 3s linear infinite;*/
 }
 
 /* Moving color gradient animation */
