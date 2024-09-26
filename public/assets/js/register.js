@@ -48,3 +48,6 @@ document.getElementById('registerBtn').addEventListener('click', function (e) {
     // Redirect to home page after submission
     window.location.href = 'index.html';
 });
+
+
+//free reg
