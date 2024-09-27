@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('registration-form');
     const alreadyRegisteredMsg = document.getElementById('already-registered-msg');
 
-    // Check if the user is already registered
-    if (localStorage.getItem('isRegistered') === 'yes') {
-        // Show the already registered message and disable the form
-        alreadyRegisteredMsg.style.display = 'block';
-        form.style.display = 'none';
-    }
+    // // Check if the user is already registered
+    // if (localStorage.getItem('isRegistered') === 'yes') {
+    //     // Show the already registered message and disable the form
+    //     alreadyRegisteredMsg.style.display = 'block';
+    //     form.style.display = 'none';
+    // }
 
     // Handle form submission
     form.addEventListener('submit', function (e) {
@@ -24,10 +24,10 @@ document.getElementById('registerBtn').addEventListener('click', function (e) {
     e.preventDefault();
 
     // Check if the user is already registered
-    if (localStorage.getItem('isRegistered') === 'yes') {
-        document.getElementById('error-msg').style.display = 'block';
-        return;
-    }
+    // if (localStorage.getItem('isRegistered') === 'yes') {
+    //     document.getElementById('error-msg').style.display = 'block';
+    //     return;
+    // }
 
     // Collect form data
     const name = document.getElementById('name').value;
@@ -48,3 +48,6 @@ document.getElementById('registerBtn').addEventListener('click', function (e) {
     // Redirect to home page after submission
     window.location.href = 'index.html';
 });
+
+
+//free reg

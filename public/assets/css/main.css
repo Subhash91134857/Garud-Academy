@@ -476,7 +476,7 @@ h6 {
 .language-switcher #current-lang {
   font-size: 18px;
   color: var(--contrast-color);
-  animation: flashText 2s infinite ease-in;
+  /*animation: flashText 2s infinite ease-in;*/
 }
 
 /* Hover effect for the button */
@@ -619,6 +619,20 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 /* Hero section styles */
+#particle-js {
+  position: fixed; /* Fixes the position so it stays in the background */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: -1; /* Make sure it stays behind other elements */
+  pointer-events: none; /* Prevent any interaction with the particles */
+}
+#hero-1 .container-1 {
+  position: relative;
+  z-index: 1; /* Content on top of particles */
+  padding: 20px;
+}
 .hero {
   /* position: relative; */
   width: 100%;
@@ -627,7 +641,7 @@ section,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: none; /* Dark overlay */
   color: white;
   text-align: center;
   z-index: 1; /* Content in front of particles */
@@ -645,7 +659,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: none;
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -654,6 +668,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  align-content: center;
 }
 
 .hero h2 {
@@ -719,11 +734,11 @@ section,
   cursor: pointer;
   transition: all 0.3s ease;
   border: 3px solid;
-  background: linear-gradient(to right, #00ffcc, #ff66cc);
+  background: linear-gradient(to right, #197c68, #953976);
   background-size: 200% auto;
   color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  animation: moveBorder 3s linear infinite;
+  /*animation: moveBorder 3s linear infinite;*/
 }
 
 /* Moving color gradient animation */
@@ -756,6 +771,39 @@ section,
     padding: 10px 20px;
   }
 }
+
+/* particle-js css*/
+
+/* Pulse animation for smooth visual effect */
+@-webkit-keyframes pulse {
+  from {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # About Section

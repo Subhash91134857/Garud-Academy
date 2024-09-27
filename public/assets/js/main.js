@@ -265,6 +265,40 @@ document.addEventListener('DOMContentLoaded', function () {
       "siteName": document.querySelector('.siteName'),
       "register-button": document.querySelector('.register-button')
     },
+    "resume": {
+      "about_me_desc": document.querySelector('.about_me_desc'),
+      "about-me-text": document.querySelector('.about-me-text'),
+      "my-journey-text": document.querySelector('.my-journey-text'),
+      "resume-title-1": document.querySelector('.resume-title-1'),
+      "resume-item-1-location": document.querySelector('.resume-item-1-location'),
+      "resume-item-1-desc-1": document.querySelector('.resume-item-1-desc-1'),
+      "resume-item-1-desc-2": document.querySelector('.resume-item-1-desc-2'),
+      "resume-item-1-desc-3": document.querySelector('.resume-item-1-desc-3'),
+
+      "resume-title-2": document.querySelector('.resume-title-2'),
+      "resume-item-2-location": document.querySelector('.resume-item-2-location'),
+      "resume-item-2-desc-1": document.querySelector('.resume-item-2-desc-1'),
+      "resume-item-2-desc-2": document.querySelector('.resume-item-2-desc-2'),
+      "resume-item-2-desc-3": document.querySelector('.resume-item-2-desc-3'),
+
+      "resume-title-3": document.querySelector('.resume-title-3'),
+      "resume-item-3-location": document.querySelector('.resume-item-3-location'),
+      "resume-item-3-desc-1": document.querySelector('.resume-item-3-desc-1'),
+      "resume-item-3-desc-2": document.querySelector('.resume-item-3-desc-2'),
+      "resume-item-3-desc-3": document.querySelector('.resume-item-3-desc-3'),
+
+      "resume-title-4": document.querySelector('.resume-title-4'),
+      "resume-item-4-location": document.querySelector('.resume-item-4-location'),
+      "resume-item-4-desc-1": document.querySelector('.resume-item-4-desc-1'),
+      "resume-item-4-desc-2": document.querySelector('.resume-item-4-desc-2'),
+      "resume-item-4-desc-3": document.querySelector('.resume-item-4-desc-3'),
+
+      "resume-title-5": document.querySelector('.resume-title-5'),
+      "resume-item-5-location": document.querySelector('.resume-item-5-location'),
+      "resume-item-5-desc-1": document.querySelector('.resume-item-5-desc-1'),
+      "resume-item-5-desc-2": document.querySelector('.resume-item-5-desc-2'),
+      "resume-item-5-desc-3": document.querySelector('.resume-item-5-desc-3')
+    }
   };
 
   // Function to load and apply content based on the current language
@@ -304,14 +338,155 @@ document.addEventListener('DOMContentLoaded', function () {
 // Registration
 document.addEventListener('DOMContentLoaded', function () {
   const registerButton = document.querySelector('.register-button');
-  registerButton.addEventListener('click', function (e) {
-    if (localStorage.getItem('isRegistered') === 'yes') {
-      e.preventDefault();
-      console.log(localStorage.getItem('language'));
-      registerButton.textContent = localStorage.getItem('language') === 'en' ? "Already Registered" : "पहले से ही पंजीकृत"
-      registerButton.href = '#'; // Disable link redirection
-      registerButton.classList.add('disabled'); // Optionally add a disabled style
-    }
-  });
+  registerButton.textContent = localStorage.getItem('language') === 'en' ? "Submit Another Response" : "पहले से ही पंजीकृत"
+  // registerButton.addEventListener('click', function (e) {
+  //   if (localStorage.getItem('isRegistered') === 'yes') {
+  //     e.preventDefault();
+  //     console.log(localStorage.getItem('language'));
+  //     registerButton.textContent = localStorage.getItem('language') === 'en' ? "Already Registered" : "पहले से ही पंजीकृत"
+  //   }
+  // });
 });
+
+
+
+/// particles-js
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize particles.js with polygon animation
+  particlesJS('particle-js', {
+    "particles": {
+      "number": {
+        "value": 40, // Number of particles
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#8a8d8f" // White color for polygons
+      },
+      "shape": {
+        "type": "polygon", // Polygon shape
+        "stroke": {
+          "width": 1,
+          "color": "#8a8d8f"
+        },
+        "polygon": {
+          "nb_sides": 5 // 5-sided polygons (pentagons)
+        }
+      },
+      "opacity": {
+        "value": 0.9,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0.3,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 2.5, // Polygon size
+        "random": true, // Random size for variety
+        "anim": {
+          "enable": true,
+          "speed": 10,
+          "size_min": 0.5,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true, // Enable lines between polygons
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true, // Enable movement
+        "speed": 2, // Slow speed for smooth animation
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas", // Interactive events detected on canvas
+      "events": {
+        "onhover": {
+          "enable": true, // Enable hover effects
+          "mode": "grab" // Grab nearby polygons on hover
+        },
+        "onclick": {
+          "enable": true, // Enable click effects
+          "mode": "push" // Push new particles on click
+        },
+        "resize": true // Adjust on window resize
+      },
+      "modes": {
+        "grab": {
+          "distance": 200, // Distance to grab particles
+          "line_linked": {
+            "opacity": 1 // Make lines more visible on hover
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true // Detect retina display for sharper particles
+  });
+
+});
+
+
+
+// contact us form submission
+
+const form = document.getElementById("contactForm");
+const scriptURL = 'https://script.google.com/macros/s/AKfycby3ArXEI0fbqe4bA7PaoRihOpl-7NXmTA_yyLWQQHyivyWRJ1m41UZv3gwAixw9RSFivg/exec';  // Replace with your Google Apps Script URL
+
+form.addEventListener('submit', e => {
+  e.preventDefault();  // Prevent form default behavior
+  document.querySelector('.loading').style.display = 'block';  // Show loading message
+  document.querySelector('.sent-message').style.display = 'none';  // Hide previous success message
+  document.querySelector('.error-message').style.display = 'none';  // Hide previous error message
+
+  // Handle form submission
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        document.querySelector('.loading').style.display = 'none';  // Hide loading message
+        document.querySelector('.sent-message').style.display = 'block';  // Show success message
+        form.reset();  // Clear the form after submission
+      })
+      .catch(error => {
+        document.querySelector('.loading').style.display = 'none';  // Hide loading message
+        document.querySelector('.error-message').style.display = 'block';  // Show error message
+      });
+});
+
+
 
