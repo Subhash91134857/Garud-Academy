@@ -59,19 +59,7 @@
   /**
    * Scroll top button
    */
-  // let scrollTop = document.querySelector('.scroll-top');
 
-  // function toggleScrollTop() {
-  //   if (scrollTop) {
-  //     // window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-  //     scrollTop.classList.add('active')
-  //   }
-  // }
-  // scrollTop.addEventListener('click', (e) => {
-  //   e.preventDefault();
-
-  // });
-  // Scroll to Top button visibility
   window.addEventListener("scroll", function () {
     const scrollTopButton = document.getElementById('scroll-top');
     if (window.scrollY > 200) {
@@ -81,8 +69,6 @@
     }
   });
 
-  // window.addEventListener('load', toggleScrollTop);
-  // document.addEventListener('scroll', toggleScrollTop);
 
   /**
    * Animation on scroll function and init
@@ -195,40 +181,8 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  // window.addEventListener('load', function (e) {
-  //   if (window.location.hash) {
-  //     if (document.querySelector(window.location.hash)) {
-  //       setTimeout(() => {
-  //         let section = document.querySelector(window.location.hash);
-  //         let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-  //         window.scrollTo({
-  //           top: section.offsetTop - parseInt(scrollMarginTop),
-  //           behavior: 'smooth'
-  //         });
-  //       }, 100);
-  //     }
-  //   }
-  // });
-  window.addEventListener('load', function (e) {
-    const hash = window.location.hash;
-    console.log(hash);
-    // Check if the hash is valid (not just # or #!)
-    if (hash && hash.length > 2 && document.querySelector(hash)) {
-      setTimeout(() => {
-        let section = document.querySelector(hash);
-        if (section) {
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }
-      }, 100);
-    }
-  });
-
+  
+  
 
   /**
    * Navmenu Scrollspy
@@ -255,68 +209,73 @@
 })();
 
 
+
+
+// Mapping sections and their corresponding class names
+
+const contentElements = {
+  "home": {
+    "siteName": document.querySelector('.siteName'),
+    "register-button": document.querySelector('.register-button')
+  },
+  "resume": {
+    "about_me_desc": document.querySelector('.about_me_desc'),
+    "about-me-text": document.querySelector('.about-me-text'),
+    "my-journey-text": document.querySelector('.my-journey-text'),
+    "resume-title-1": document.querySelector('.resume-title-1'),
+    "resume-item-1-location": document.querySelector('.resume-item-1-location'),
+    "resume-item-1-desc-1": document.querySelector('.resume-item-1-desc-1'),
+    "resume-item-1-desc-2": document.querySelector('.resume-item-1-desc-2'),
+    "resume-item-1-desc-3": document.querySelector('.resume-item-1-desc-3'),
+
+    "resume-title-2": document.querySelector('.resume-title-2'),
+    "resume-item-2-location": document.querySelector('.resume-item-2-location'),
+    "resume-item-2-desc-1": document.querySelector('.resume-item-2-desc-1'),
+    "resume-item-2-desc-2": document.querySelector('.resume-item-2-desc-2'),
+    "resume-item-2-desc-3": document.querySelector('.resume-item-2-desc-3'),
+
+    "resume-title-3": document.querySelector('.resume-title-3'),
+    "resume-item-3-location": document.querySelector('.resume-item-3-location'),
+    "resume-item-3-desc-1": document.querySelector('.resume-item-3-desc-1'),
+    "resume-item-3-desc-2": document.querySelector('.resume-item-3-desc-2'),
+    "resume-item-3-desc-3": document.querySelector('.resume-item-3-desc-3'),
+
+    "resume-title-4": document.querySelector('.resume-title-4'),
+    "resume-item-4-location": document.querySelector('.resume-item-4-location'),
+    "resume-item-4-desc-1": document.querySelector('.resume-item-4-desc-1'),
+    "resume-item-4-desc-2": document.querySelector('.resume-item-4-desc-2'),
+    "resume-item-4-desc-3": document.querySelector('.resume-item-4-desc-3'),
+
+    "resume-title-5": document.querySelector('.resume-title-5'),
+    "resume-item-5-location": document.querySelector('.resume-item-5-location'),
+    "resume-item-5-desc-1": document.querySelector('.resume-item-5-desc-1'),
+    "resume-item-5-desc-2": document.querySelector('.resume-item-5-desc-2'),
+    "resume-item-5-desc-3": document.querySelector('.resume-item-5-desc-3')
+  }
+};
+// Function to load and apply content based on the current language
+function loadContent(lang) {
+  fetch(`content-${lang}.json`)
+    .then(response => response.json())
+    .then(data => {
+      // Iterate through each section and update the content
+      Object.keys(contentElements).forEach(section => {
+        Object.keys(contentElements[section]).forEach(key => {
+          if (contentElements[section][key]) {
+            contentElements[section][key].textContent = data[section][key];
+          }
+        });
+      });
+    })
+    .catch(error => console.error('Error loading content:', error));
+}
 document.addEventListener('DOMContentLoaded', function () {
   const langButton = document.getElementById('current-lang');
   let currentLang = localStorage.getItem('language') || 'hi'; // Default to Hindi ('hi')
 
-  // Mapping sections and their corresponding class names
-  const contentElements = {
-    "home": {
-      "siteName": document.querySelector('.siteName'),
-      "register-button": document.querySelector('.register-button')
-    },
-    "resume": {
-      "about_me_desc": document.querySelector('.about_me_desc'),
-      "about-me-text": document.querySelector('.about-me-text'),
-      "my-journey-text": document.querySelector('.my-journey-text'),
-      "resume-title-1": document.querySelector('.resume-title-1'),
-      "resume-item-1-location": document.querySelector('.resume-item-1-location'),
-      "resume-item-1-desc-1": document.querySelector('.resume-item-1-desc-1'),
-      "resume-item-1-desc-2": document.querySelector('.resume-item-1-desc-2'),
-      "resume-item-1-desc-3": document.querySelector('.resume-item-1-desc-3'),
 
-      "resume-title-2": document.querySelector('.resume-title-2'),
-      "resume-item-2-location": document.querySelector('.resume-item-2-location'),
-      "resume-item-2-desc-1": document.querySelector('.resume-item-2-desc-1'),
-      "resume-item-2-desc-2": document.querySelector('.resume-item-2-desc-2'),
-      "resume-item-2-desc-3": document.querySelector('.resume-item-2-desc-3'),
 
-      "resume-title-3": document.querySelector('.resume-title-3'),
-      "resume-item-3-location": document.querySelector('.resume-item-3-location'),
-      "resume-item-3-desc-1": document.querySelector('.resume-item-3-desc-1'),
-      "resume-item-3-desc-2": document.querySelector('.resume-item-3-desc-2'),
-      "resume-item-3-desc-3": document.querySelector('.resume-item-3-desc-3'),
 
-      "resume-title-4": document.querySelector('.resume-title-4'),
-      "resume-item-4-location": document.querySelector('.resume-item-4-location'),
-      "resume-item-4-desc-1": document.querySelector('.resume-item-4-desc-1'),
-      "resume-item-4-desc-2": document.querySelector('.resume-item-4-desc-2'),
-      "resume-item-4-desc-3": document.querySelector('.resume-item-4-desc-3'),
-
-      "resume-title-5": document.querySelector('.resume-title-5'),
-      "resume-item-5-location": document.querySelector('.resume-item-5-location'),
-      "resume-item-5-desc-1": document.querySelector('.resume-item-5-desc-1'),
-      "resume-item-5-desc-2": document.querySelector('.resume-item-5-desc-2'),
-      "resume-item-5-desc-3": document.querySelector('.resume-item-5-desc-3')
-    }
-  };
-
-  // Function to load and apply content based on the current language
-  function loadContent(lang) {
-    fetch(`content-${lang}.json`)
-      .then(response => response.json())
-      .then(data => {
-        // Iterate through each section and update the content
-        Object.keys(contentElements).forEach(section => {
-          Object.keys(contentElements[section]).forEach(key => {
-            if (contentElements[section][key]) {
-              contentElements[section][key].textContent = data[section][key];
-            }
-          });
-        });
-      })
-      .catch(error => console.error('Error loading content:', error));
-  }
 
   // Function to toggle between Hindi ('hi') and English ('en')
   function toggleLanguage() {
@@ -329,23 +288,33 @@ document.addEventListener('DOMContentLoaded', function () {
   // Set button to current language and load the corresponding content
   langButton.textContent = currentLang === 'hi' ? 'EN' : 'HINDI';
   loadContent(currentLang);
+  document.getElementById("language-switcher").addEventListener('click', toggleLanguage);
 
   // Add event listener to switch languages when button is clicked
-  langButton.addEventListener('click', toggleLanguage);
+
 });
+
+// navlink laungage
+document.getElementById("english").addEventListener("click", () => {
+  loadContent('en')
+  localStorage.setItem('language', "en");
+  const langButton = document.getElementById('current-lang');
+  langButton.textContent = "HINDI"
+
+})
+document.getElementById("hindi").addEventListener("click", () => {
+  loadContent('hi')
+  localStorage.setItem('language', "hi");
+  const langButton = document.getElementById('current-lang');
+  langButton.textContent = "EN"
+})
 
 
 // Registration
 document.addEventListener('DOMContentLoaded', function () {
   const registerButton = document.querySelector('.register-button');
   registerButton.textContent = localStorage.getItem('language') === 'en' ? "Submit Another Response" : "पहले से ही पंजीकृत"
-  // registerButton.addEventListener('click', function (e) {
-  //   if (localStorage.getItem('isRegistered') === 'yes') {
-  //     e.preventDefault();
-  //     console.log(localStorage.getItem('language'));
-  //     registerButton.textContent = localStorage.getItem('language') === 'en' ? "Already Registered" : "पहले से ही पंजीकृत"
-  //   }
-  // });
+
 });
 
 
@@ -476,17 +445,16 @@ form.addEventListener('submit', e => {
   document.querySelector('.error-message').style.display = 'none';  // Hide previous error message
 
   // Handle form submission
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        document.querySelector('.loading').style.display = 'none';  // Hide loading message
-        document.querySelector('.sent-message').style.display = 'block';  // Show success message
-        form.reset();  // Clear the form after submission
-      })
-      .catch(error => {
-        document.querySelector('.loading').style.display = 'none';  // Hide loading message
-        document.querySelector('.error-message').style.display = 'block';  // Show error message
-      });
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      document.querySelector('.loading').style.display = 'none';  // Hide loading message
+      document.querySelector('.sent-message').style.display = 'block';  // Show success message
+      form.reset();  // Clear the form after submission
+    })
+    .catch(error => {
+      document.querySelector('.loading').style.display = 'none';  // Hide loading message
+      document.querySelector('.error-message').style.display = 'block';  // Show error message
+    });
 });
-
 
 
