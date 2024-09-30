@@ -1,22 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 :root {
-  --dark-shadow: #a5a5a5; /* blue */
-  --blue-theme: #dddddd; /* red */
-  --light-shadow: #ffffff; /* lightgrey */
-  --text-color: #9f9f9f;
-  --action-color: #5dbff4;
+  --dark-shadow: #1c1c1c; /* dark grey for shadow */
+  --blue-theme: #003366; /* primary deep blue for background */
+  --light-shadow: #f0f0f0; /* light grey for soft highlights */
+  --text-color: #ffffff; /* white text for contrast */
+  --action-color: #ff6600; /* motivational orange for interactions */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-*
-{
+* {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body
-{
+
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   width: 100vw;
   font-weight: 600;
   display: flex;
@@ -26,176 +24,194 @@ body
   justify-content: center;
 }
 
-.sign-div
-{
-  width: 380px;
-  box-shadow:
-          10px 10px 20px var(--light-shadow),
-          -10px -10px 20px var(--dark-shadow);
-  padding: 45px 35px 35px 35px;
+.sign-div {
+  width: 90%; /* Use a percentage for responsiveness */
+  max-width: 380px; /* Set a maximum width for larger screens */
+  padding: 45px 35px;
   border-radius: 40px;
+  box-shadow: 10px 10px 20px var(--light-shadow),
+    -10px -10px 20px var(--dark-shadow);
+
+  /* Updated gradient with a lighter green and smoother transition */
+  background: linear-gradient(135deg, #003366, #8bc34a, #ff6600);
+  background-size: 400% 400%; /* Increase for smoother animation */
+  animation: gradientShift 6s ease infinite;
 }
 
-.logo
-{
+/* Keyframes for the gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 480px) {
+  .sign-div {
+    /* Add box shadow to both sides for mobile view */
+    box-shadow: 10px 0 20px var(--light-shadow), -10px 0 20px var(--dark-shadow),
+      0 10px 20px var(--light-shadow), 0 -10px 20px var(--dark-shadow);
+  }
+}
+
+.logo {
   background: url("../img/logo-no-background.png");
   width: 100px;
   height: 100px;
   background-size: cover;
   margin: 0 auto;
-  box-shadow: 0 0 2px var(--light-shadow),
-  0 0 5px var(--dark-shadow),
-  8px 8px 15px var(--light-shadow),
-  -8px -8px 15px var(--dark-shadow);
+  box-shadow: 0 0 2px var(--light-shadow), 0 0 5px var(--dark-shadow),
+    8px 8px 15px var(--light-shadow), -8px -8px 15px var(--dark-shadow);
   border-radius: 50%;
-
-
 }
-.title
-{
+
+.title {
   text-align: center;
   font-size: 28px;
   color: var(--text-color);
-  text-shadow:
-          8px 8px 15px var(--light-shadow),
-          -8px -8px 15px var(--dark-shadow);
+  text-shadow: 8px 8px 15px var(--light-shadow),
+    -8px -8px 15px var(--dark-shadow);
   padding-top: 24px;
   margin-bottom: 20px;
 }
-.login-in
-{
+
+.login-in {
   width: 100%;
   padding: 60px 5px 5px 5px;
 }
-.sign-up
-{
+
+.sign-up {
   width: 100%;
   padding: 7px 5px 5px 5px;
 }
+
 .login-in input,
-.sign-up input
-{
+.sign-up input {
   border: none;
   outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: none;
   font-size: 18px;
   color: var(--text-color);
   padding: 18px 10px 18px 1px;
-
 }
+
 /*label added by sachin*/
-.sign-up .input-label{
+.sign-up .input-label {
   color: var(--text-color);
   margin-inline-start: 20px;
   font-weight: lighter;
 }
 
-
 .username,
-.password
-{
-  box-shadow:
-          inset 5px 5px 8px var(--light-shadow),
-          inset -5px -5px 8px var(--dark-shadow);
+.password {
+  box-shadow: inset 5px 5px 8px var(--light-shadow),
+    inset -5px -5px 8px var(--dark-shadow);
   border-radius: 50px;
   margin-bottom: 30px;
   margin-top: 5px;
 }
-.username::placeholder,
-.password::placeholder
-{
-  color: var(--text-color);
-  font-family: 'Poppins', sans-serif;
 
+.username::placeholder,
+.password::placeholder {
+  color: rgba(
+    35,
+    34,
+    34,
+    0.8
+  ); /* Lighten the color and add some opacity for better visibility */
+  font-family: "Poppins", sans-serif;
 }
+
 .login-in .lni,
-.sign-up .lni
-{
+.sign-up .lni {
   height: 22px;
   color: var(--text-color);
   margin: 0 10px -3px 25px;
   font-size: 18px;
 }
 
-.buttons
-{
+.buttons {
   outline: none;
   border: none;
   cursor: pointer;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: var(--blue-theme);
   height: 60px;
   border-radius: 30px;
   color: var(--text-color);
-  font-weight:700;
+  font-weight: 700;
   font-size: 18px;
-  box-shadow: 5px 5px 8px var(--light-shadow),
-  -5px -5px 8px var(--dark-shadow);
+  box-shadow: 5px 5px 8px var(--light-shadow), -5px -5px 8px var(--dark-shadow);
+  position: relative; /* Position relative for the floating text */
 }
-.buttons:hover
-{
+
+.buttons:hover {
   background: var(--action-color);
   color: black;
 }
-.buttons:active
-{
+
+.buttons:active {
   background: var(--action-color);
 }
-a
-{
+
+/* Floating and revolving text around the button */
+
+a {
   text-decoration: none;
   color: var(--text-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.link
-{
+
+.link {
   padding: 20px;
   text-align: center;
 }
-.link a
-{
+
+.link a {
   color: var(--text-color);
   font-size: 15px;
   font-weight: 600;
 }
-.link a:hover
-{
+
+.link a:hover {
   color: #000;
 }
-.homeback
-{
+
+.homeback {
   position: relative;
   width: 100%;
-  min-height:100vh;
+  min-height: 100vh;
   text-align: center;
   align-items: center !important;
   justify-content: center !important;
   display: flex;
-
 }
-.homebox
-{
+
+.homebox {
   width: 380px;
   padding: 45px 35px 35px 35px;
 }
-.success-check
-{
+
+.success-check {
   color: #692729;
   margin: 0 auto;
 }
-.success-check i
-{
+
+.success-check i {
   font-size: 3rem;
-
-}
-img
-{
-  width:100%
 }
 
-
+img {
+  width: 100%;
+}
 
 /* Neomorphic Styles for Radio Buttons */
 .form-check {
@@ -206,52 +222,42 @@ img
   padding: 10px;
   border-radius: 50px;
   box-shadow: 5px 5px 10px var(--light-shadow),
-  -5px -5px 10px var(--dark-shadow);
+    -5px -5px 10px var(--dark-shadow);
 }
 
 .form-check-input {
-  appearance: none; /* Remove default styling */
+  appearance: none;
   color: var(--blue-theme);
   background-color: var(--blue-theme);
-  box-shadow:
-          inset 4px 4px 4px var(--dark-shadow),
-          inset -4px -4px 4px var(--light-shadow);
+  box-shadow: inset 4px 4px 4px var(--dark-shadow),
+    inset -4px -4px 4px var(--light-shadow);
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  /*border: 2px solid #fc5130; !* Border color *!*/
-  margin-right: 10px; /* Space between radio and label */
+  margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .form-check-input:checked {
-  appearance: none; /* Remove default styling */
-  border-radius: 50%; /* Optional: to make it round */
-  box-shadow:
-          inset 4px 4px 4px var(--light-shadow),
-          inset -4px -4px 4px var(--dark-shadow);
-  /*box-shadow:*/
-  /*        inset 5px 5px 8px #59c0f8,*/
-  /*        inset 5px 5px 8px #031925;*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  appearance: none;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 4px var(--light-shadow),
+    inset -4px -4px 4px var(--dark-shadow);
 }
- /*Using ::before to insert the Bootstrap icon */
+
 .form-check-input:checked::before {
-  content: '\2713'; /* Unicode for the Bootstrap icon */
-  font-size: 16px; /* Adjust the size of the icon */
+  content: "\2713";
+  font-size: 16px;
   font-weight: bold;
-  color: var(--action-color); /* Icon color */ /* Center the icon */
+  color: var(--action-color);
   margin-left: 10px;
 }
 
 .form-check-input:checked::after {
-  content: '';
+  content: "";
   display: block;
   width: 12px;
-
   height: 12px;
   border-radius: 50%;
   position: absolute;
@@ -260,19 +266,14 @@ img
   transform: translate(-50%, -50%);
 }
 
-
-
-
 .radiogroup {
   padding-top: 14px;
   border-radius: 16px;
   background: var(--blue-theme);
   margin-bottom: 20px;
-  box-shadow:
-          4px 4px 4px 0px var(--light-shadow) inset,
-          -4px -4px 4px 0px var(--dark-shadow) inset;
+  box-shadow: 4px 4px 4px 0px var(--light-shadow) inset,
+    -4px -4px 4px 0px var(--dark-shadow) inset;
 }
-
 
 .wrapper {
   margin: 8px 0;
@@ -295,8 +296,8 @@ img
 
 .text {
   margin-left: 16px;
-  opacity: .6;
-  transition: opacity .2s linear, transform .2s ease-out;
+  opacity: 0.6;
+  transition: opacity 0.2s linear, transform 0.2s ease-out;
 }
 
 .indicator {
@@ -306,14 +307,15 @@ img
   width: 30px;
   color: red;
   background-color: green;
-  box-shadow: -8px -4px 8px 0px var(--light-shadow), 8px 4px 12px 0px var(--dark-shadow);
+  box-shadow: -8px -4px 8px 0px var(--light-shadow),
+    8px 4px 12px 0px var(--dark-shadow);
   overflow: hidden;
 }
 
 .indicator::before,
 .indicator::after {
   background-color: var(--blue-theme);
-  content: '';
+  content: "";
   position: absolute;
   top: 10%;
   left: 10%;
@@ -324,20 +326,20 @@ img
 
 .indicator::before {
   background-color: var(--blue-theme);
-  box-shadow:
-          -4px -2px 4px 0px var(--light-shadow),
-          4px 2px 8px 0px var(--dark-shadow);
+  box-shadow: -4px -2px 4px 0px var(--light-shadow),
+    4px 2px 8px 0px var(--dark-shadow);
 }
 
 .indicator::after {
   background-color: var(--blue-theme);
-  box-shadow: -4px -2px 4px 0px var(--light-shadow), 4px 2px 8px 0px var(--dark-shadow);
+  box-shadow: -4px -2px 4px 0px var(--light-shadow),
+    4px 2px 8px 0px var(--dark-shadow);
   transform: scale3d(1, 1, 1);
-  transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 .state:checked ~ .label .indicator::after {
-  transform: scale3d(.975, .975, 1);
+  transform: scale3d(0.975, 0.975, 1);
   opacity: 0;
 }
 
@@ -349,9 +351,3 @@ img
 .label:hover .text {
   opacity: 1;
 }
-
-
-
-
-
-

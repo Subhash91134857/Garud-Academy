@@ -1,167 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="assets/css/Registration.css">
-    <link rel="icon" href="assets/img/favicon.png" sizes="200x200" >
+    <link rel="icon" href="assets/img/favicon.png" sizes="200x200">
 
 </head>
+
 <body>
-<div class="sign-div">
-    <div class="logo"></div>
-    <div class="title">Garud Academy</div>
-    <div class="sign-up">
-        <label for="name-field" class="input-label">Your Name</label>
-        <div class="username">
-            <i class="lni lni-user"></i>
-            <input type="text" id="name-field" placeholder="Name">
+    <div class="sign-div">
+        <div class="logo"></div>
+        <div class="title">Garud Academy</div>
+        <div class="sign-up">
+            <label for="name-field" class="input-label">Your Name</label>
+            <div class="username">
+                <i class="lni lni-user"></i>
+                <input type="text" id="name-field" placeholder="Name">
+            </div>
+
+            <label for="email-field" class="input-label">Your phone</label>
+            <div class="username">
+                <i class="lni lni-envelope"></i>
+                <label>
+                    <input type="tel" id="email-field" placeholder="phone no.">
+                </label>
+            </div>
+
+            <label for="vill-field" class="input-label">Your village/town</label>
+            <div class="username">
+                <i class="lni lni-envelope"></i>
+                <label>
+                    <input type="tel" id="vill-field" placeholder="village/town">
+                </label>
+            </div>
+
+
+
+
+
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">Have you gone through
+                        G-academy website completely?<br>Hindi me same</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-1" type="radio" id="qs-1-opt-1" value="yes">
+                        <label class="form-check-label" for="qs-1-opt-1">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-1" type="radio" id="qs-1-opt-2" value="no">
+                        <label class="form-check-label" for="qs-1-opt-2">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">How much interested you are studying here?<br>Hindi me same
+                    </legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-1" value="maybe">
+                        <label class="form-check-label" for="qs-2-opt-1">Maybe</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-2" value="interested">
+                        <label class="form-check-label" for="qs-2-opt-2">Interested</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-3"
+                            value="very interested">
+                        <label class="form-check-label" for="qs-2-opt-3">Very interested</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-4"
+                            value="will definitely join">
+                        <label class="form-check-label" for="qs-2-opt-4">will definitely join</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!--  qs-4  -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">Are you satisfied with quality of education from your current
+                        school/coaching?<br>Hindi me same</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-4" type="radio" id="qs-4-opt-1" value="yes">
+                        <label class="form-check-label" for="qs-4-opt-1">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-4" type="radio" id="qs-4-opt-2" value="no">
+                        <label class="form-check-label" for="qs-4-opt-2">No</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!--  qs-5  -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">In what area most of your teachers generally focus?<br>Hindi me
+                        same</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">opt-1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">opt-2</label>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- question-6 -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">what you have studied 1 month back, how strong your pakad on
+                        those topics?<br>Hindi me
+                        same</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">can't recall</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">ratta mara tha bhul gya </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">thoda thoda yaad</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">revision ki jarurat</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1"> totally confident on those topics</label>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- Question-7 -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">what about topics you studied 6 months back<br>Hindi me
+                        same?</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">can't recall</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">ratta mara tha bhul gya </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">thoda thoda yaad</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">revision ki jarurat</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1"> totally confident on those topics</label>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- question-8 -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">if i take exam on what you have studied till now, how much can
+                        you score in your most favourite subjects?<br>Hindi me
+                        same?</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">Less than 60%</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">Between 60% - 80% </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">Between 80% - 90%</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">Class Topper hoon</label>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- question-9 -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">Do you feel the need of more conceptual understanding rather
+                        than to memorize and forget after one month?<br>Hindi me
+                        same?</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">No</label>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- question-10 -->
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend style="padding-bottom: 10px">There's is dedication needed from your end too, how motivated
+                        are you?<br>Hindi me
+                        same?</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
+                        <label class="form-check-label" for="qs-5-opt-1">very much motivated</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">I'll give my 100%</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">All i need is right guidance</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
+                        <label class="form-check-label" for="qs-5-opt-2">i can give my 110%</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <!--        1. have you gone through g academy website&ndash;&gt;-->
+            <!--        2. your vill./town-->
+            <!--        3. how much intersted you are studying here: maybe, interested, very interested, definitely join -->
+            <!--        4. Are you satisfied with quality of education from your current school/coaching -->
+            <!--        5. In what area most of your teachers generally focus: just read the book, ask you to ratta maar, explain concept behind it clearly-->
+            <!--        6. what you have studied 1 month back, how strong your pakad on those topics: can't recall, ratta mara tha bhul gya, thoda thoda yaad, revision ki jarurat, totally confident on those topics-->
+            <!--        7. what about topics you studied 6 months back: --- --- --- -;-->
+            <!--        8. if i take exam on what you have studied till now, how much can you score in your most favourite subject-->
+            <!--        9. Do you feel the need of more conceptual understanding rather than to memorize and forget after one month-->
+            <!--        10. If you get a right guidance, which exam/job you would like to crack -->
+            <!--        11. There's is dedication needed from your end too, how motivated are you?: very much motivated, I'll give my 100%, All i need is right guidance, i can give my 110% -->
+
+
+
+
+
+
+            <div class="radiogroup">
+                <fieldset style="border-color: transparent">
+                    <legend>Choose your favorite fruit</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fruit" id="apple" value="apple">
+                        <label class="form-check-label" for="apple">Apple</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fruit" id="banana" value="banana">
+                        <label class="form-check-label" for="banana">Banana</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fruit" id="orange" value="orange">
+                        <label class="form-check-label" for="orange">Orange</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fruit" id="grape" value="grape">
+                        <label class="form-check-label" for="grape">Grape</label>
+                    </div>
+                </fieldset>
+            </div>
+
+
+
         </div>
 
-        <label for="email-field" class="input-label">Your phone</label>
-        <div class="username">
-            <i class="lni lni-envelope"></i>
-            <label>
-                <input type="tel" id="email-field" placeholder="phone no.">
-            </label>
-        </div>
-
-        <label for="vill-field" class="input-label">Your village/town</label>
-        <div class="username">
-            <i class="lni lni-envelope"></i>
-            <label>
-                <input type="tel" id="vill-field" placeholder="village/town">
-            </label>
-        </div>
-
-
-        <label for="qs-1" class="input-label">Your village/town</label>
-        <div class="username">
-            <i class="lni lni-envelope"></i>
-            <label>
-                <input type="tel" id="qs-1" placeholder="village/town">
-            </label>
-        </div>
-
-
-        <div class="radiogroup">
-            <fieldset style="border-color: transparent">
-                <legend style="padding-bottom: 10px">Have you gone through g academy website completely?<br>Hindi me same</legend>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-1" type="radio" id="qs-1-opt-1" value="yes">
-                    <label class="form-check-label" for="qs-1-opt-1">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-1" type="radio" id="qs-1-opt-2" value="no">
-                    <label class="form-check-label" for="qs-1-opt-2">No</label>
-                </div>
-            </fieldset>
-        </div>
-
-
-        <div class="radiogroup">
-            <fieldset style="border-color: transparent">
-                <legend style="padding-bottom: 10px">How much interested you are studying here?<br>Hindi me same</legend>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-1" value="maybe">
-                    <label class="form-check-label" for="qs-2-opt-1">Maybe</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-2" value="interested">
-                    <label class="form-check-label" for="qs-2-opt-2">Interested</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-3" value="very interested">
-                    <label class="form-check-label" for="qs-2-opt-3">Very interested</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-2" type="radio" id="qs-2-opt-4" value="will definitely join">
-                    <label class="form-check-label" for="qs-2-opt-4">will definitely join</label>
-                </div>
-            </fieldset>
-        </div>
-
-
-        <!--  qs-4  -->
-        <div class="radiogroup">
-            <fieldset style="border-color: transparent">
-                <legend style="padding-bottom: 10px">Are you satisfied with quality of education from your current school/coaching?<br>Hindi me same</legend>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-4" type="radio" id="qs-4-opt-1" value="yes">
-                    <label class="form-check-label" for="qs-4-opt-1">Yes</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-4" type="radio" id="qs-4-opt-2" value="no">
-                    <label class="form-check-label" for="qs-4-opt-2">No</label>
-                </div>
-            </fieldset>
-        </div>
-
-
-        <!--  qs-5  -->
-        <div class="radiogroup">
-            <fieldset style="border-color: transparent">
-                <legend style="padding-bottom: 10px">In what area most of your teachers generally focus?<br>Hindi me same</legend>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-1" value="opt-1">
-                    <label class="form-check-label" for="qs-5-opt-1">opt-1</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" name="qs-5" type="radio" id="qs-5-opt-2" value="opt-2">
-                    <label class="form-check-label" for="qs-5-opt-2">opt-2</label>
-                </div>
-            </fieldset>
-        </div>
-
-
-<!--        1. have you gone through g academy website&ndash;&gt;-->
-        <!--        2. your vill./town-->
-        <!--        3. how much intersted you are studying here: maybe, interested, very interested, definitely join -->
-        <!--        4. Are you satisfied with quality of education from your current school/coaching -->
-        <!--        5. In what area most of your teachers generally focus: just read the book, ask you to ratta maar, explain concept behind it clearly-->
-        <!--        6. what you have studied 1 month back, how strong your pakad on those topics: can't recall, ratta mara tha bhul gya, thoda thoda yaad, revision ki jarurat, totally confident on those topics-->
-        <!--        7. what about topics you studied 6 months back: --- --- --- -;-->
-        <!--        8. if i take exam on what you have studied till now, how much can you score in your most favourite subject-->
-        <!--        9. Do you feel the need of more conceptual understanding rather than to memorize and forget after one month-->
-        <!--        10. If you get a right guidance, which exam/job you would like to crack -->
-        <!--        11. There's is dedication needed from your end too, how motivated are you?: very much motivated, I'll give my 100%, All i need is right guidance, i can give my 110% -->
-
-
-
-
-
-
-        <div class="radiogroup">
-            <fieldset style="border-color: transparent">
-                <legend>Choose your favorite fruit</legend>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="fruit" id="apple" value="apple">
-                    <label class="form-check-label" for="apple">Apple</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="fruit" id="banana" value="banana">
-                    <label class="form-check-label" for="banana">Banana</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="fruit" id="orange" value="orange">
-                    <label class="form-check-label" for="orange">Orange</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="fruit" id="grape" value="grape">
-                    <label class="form-check-label" for="grape">Grape</label>
-                </div>
-            </fieldset>
-        </div>
-
-
+        <button class="buttons">Sign Up</button>
 
     </div>
 
-    <button class="buttons">Sign Up</button>
-
-</div>
-
 
 </body>
+
 </html>
