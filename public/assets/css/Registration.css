@@ -2,7 +2,7 @@
 :root {
   --dark-shadow: #1c1c1c; /* dark grey for shadow */
   --blue-theme: #003366; /* primary deep blue for background */
-  --light-shadow: #f0f0f0; /* light grey for soft highlights */
+  --light-shadow: #2065af; /* light grey for soft highlights */
   --text-color: #ffffff; /* white text for contrast */
   --action-color: #ff6600; /* motivational orange for interactions */
 }
